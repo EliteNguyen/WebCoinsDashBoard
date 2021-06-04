@@ -207,6 +207,33 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>egvietnam_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>egvietnam_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>egvietnam_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserRole.cs">
+      <DependentUpon>egvietnam_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\egvietnam_db.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>egvietnam_db.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\egvietnam_db.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>egvietnam_db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\egvietnam_db.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>egvietnam_db.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -449,11 +476,28 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\egvietnam_db.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>egvietnam_db.edmx</DependentUpon>
+      <LastGenOutput>egvietnam_db.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\egvietnam_db.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>egvietnam_db.edmx</DependentUpon>
+      <LastGenOutput>egvietnam_db.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\assets\fonts\webfont\cryptocoins.ttf" />
     <Content Include="Content\assets\fonts\webfont\cryptocoins.woff" />
     <Content Include="Content\assets\fonts\webfont\cryptocoins.woff2" />
+    <EntityDeploy Include="Models\egvietnam_db.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>egvietnam_db.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\egvietnam_db.edmx.diagram">
+      <DependentUpon>egvietnam_db.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -562,7 +606,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
